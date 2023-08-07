@@ -1,0 +1,425 @@
+@font-face {
+    font-family: 'Metropolis-Medium';
+    src: url('/fonts/Metropolis-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Metropolis-Regular';
+    src: url('/fonts/Metropolis-Regular.otf') format('opentype');
+  }
+
+:root{
+    --sea-green : #007F61;
+    --line-gray: #C8C8C8;
+    --radio_b_color: #DADADA;
+}
+
+h1{
+    font-family: 'Metropolis';
+    color: var(--sea-green);
+}
+body{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.mainContainer{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* row-gap: 2px; */
+    width: 340.73px;
+    height: 18px;
+
+}
+.heading_text{
+    /* font-weight: 200; */
+    width: 126px;
+    height: 18px;
+    font-family: 'Metropolis-Medium';
+    color: var(--sea-green);
+    font-size: large;
+}
+
+.line{
+    width: 94px;
+    margin: -1px 0;
+    rotate: -0;
+    border: none;
+    border-top: 1px solid var(--line-gray);
+    margin: 10px 0;
+    opacity: 0.8;
+    /* box-shadow: 0px 4px 4px 0px var(--line-gray);; */
+} 
+
+
+/* sec 1 styling */
+
+.priceArea{
+    width: 340.73px;
+    height: 74.11px;
+    border: none;
+    border-radius: 4px;
+    border: 0.9px solid var(--line-gray);
+    margin: 10px 0;
+    background: #FFFFFF;
+    /* opacity: 0.5; */
+}
+
+.selected {
+    height: 161.78px;
+    background-color: #F4FBF9;
+    
+
+}
+
+.priceContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20px; */
+    /* padding-bottom: 15px; */
+}
+/* .price_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    
+} */
+
+  .radioB{
+    position: relative;
+    display: inline-block;
+    /* font-family: 'Metropolis-Medium'; */
+    vertical-align: middle;
+    padding-left: 35px;
+    /* padding-top: 7px; */
+    cursor: pointer;
+    
+  }
+  .price_labels{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+    /* padding-bottom: 20px; */
+    font-size: small;
+  }
+  .lb_1{
+    font-family: 'Metropolis-Regular';
+  }
+  .lb_2{
+    font-family: 'Metropolis-Medium';
+  }
+  .radioB input[type='radio']{
+    display: none;
+  }
+  .radioB span{
+    width: 14.6px;
+    height: 14.6px;
+    border-radius: 50%;
+    border: 1px solid var(--radio_b_color);
+    /* opacity: 0.5; */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 7px;
+  }
+  
+  .radioB span::after{
+     content: "";
+     height: 10px;
+     width: 10px;
+     background: var(--sea-green);
+     display: block;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%) scale(0);
+     border-radius: 50%;
+     transition: 100ms ease-in-out 0s;
+
+  }
+  .radioB input[type="radio"]:checked ~ span:after{
+    transform: translate(-50%, -50%) scale(1);
+     
+  }
+
+
+  /* price left */
+
+.price_left_text{
+    font-family: 'Metropolis-Medium';
+    font-weight: 500;
+    font-size: 14.46px;
+}
+
+
+/* sec-3 discount Area */
+
+
+.discountContainer{
+    padding: 20px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+} 
+.discountContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+.discount_labels{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 4px;
+    /* padding-bottom: 20px; */
+    /* font-size: small; */
+    font-size: 14.46px;
+    font-family: 'Inter';
+    width: 100%;
+}
+.db_1{
+    width: 39px;
+    height: 18px;
+    font-weight: 400;
+  }
+  .db_2{
+    width: 84px;
+    height: 18px;
+    font-weight: 500;
+  }
+
+  .discount_center{
+    position: relative;
+    height: 12px;
+    align-items: center;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 9.94px;
+    color: #9F9F9F;
+    margin-top: 18px;
+  }
+  /* .discount_center_text{
+    position: absolute;
+    margin-top: 2px;
+  } */
+  .discount_line{
+    position: absolute;
+    top: -1px;
+    /* margin-bottom: 10px; */
+    border: none;
+    width: 56.04px;
+    border: 0.9px solid var(--line-gray);
+    /* opacity: 0.5; */
+    
+  }
+  .discount_left{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: right;
+  }
+  .dleft_upper{
+    color: var(--sea-green);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 12.65px;
+  }
+  .dleft_lower{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 12.65px;
+  }
+.grid-container{
+  width: 59%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  grid-template-rows: repeat(3, 1fr);    /* Creates 3 equal rows */
+  gap: 10px; 
+  /* margin-top: 10px;
+  margin-left: -20px; */
+  position: relative;
+  opacity: 0;
+}
+
+
+.grid-item {
+    /* Add any styles you want for the grid items here */
+    /* border: 1px solid #000; */
+    /* padding: 10px; */
+    /* text-align: center; */
+    text-align: left;
+  }
+
+  .grid-item_left{
+    text-align: right;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 9.04px;
+  }
+  .grid-item_heading{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 9.04px;
+    text-align: left;
+  }
+   
+  .select_menu{
+    width: 65.98px; 
+    height: 25.31px; 
+     align-items: center;
+     margin-top: -10px;
+
+  }
+  .select_menu.active .options{
+    display: block;
+  }
+  .select_menu .selectBtn{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--line-gray);
+    border-radius: 2px;
+    padding: 5px;
+    align-items: center;
+    background: #FFFF;
+  }
+
+  .selectBtn .sBtn-text{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 10.85px;
+  }
+  .selectBtn i{
+   font-size: x-small;
+   cursor: pointer;
+   transition: 0.3s;
+  }
+
+  .select_menu.active .selectBtn i{
+    transform: rotate(-180deg);
+  }
+
+  .select_menu .options{
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    /* padding: 5px; */
+    margin-top: 2px;
+    text-align: left;
+    background: #FFFF;
+    border: 1px solid var(--line-gray);
+    border-radius: 2px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 8px;
+  }
+
+  .options .option{
+    cursor: pointer;
+    padding: 0 2px;
+    
+  }
+  .options .option:hover{
+    background: var(--line-gray);
+  }
+
+  /* sec-4 total */
+
+.totalContainer{
+    width: 340.73px;
+    margin-top: -20px;
+}
+.total_container_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter";
+    font-size: 14x;
+    
+}
+
+.total_container_content .total_left{
+    font-weight: 500;
+    color: #007F61;
+    opacity: 60%;
+}
+
+.total_container_content .total_right > p{
+    font-weight: 400;
+}
+.total_container_content .total_right{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+/* sec-6 */
+
+.cartBtn{
+    width: 341px;
+    height: 48px;
+    background: var(--sea-green);
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 4px 4px 0px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+/* sec-7 */
+.credits{
+    width: 341px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5px;
+    margin-top: -5px;
+}
+.c_container{
+    /* border: none; */
+    width: 5px;
+    height: 5px;
+    border: 0.33px solid black;
+    padding: 1px;
+    border-radius: 50%;
+    position: relative;
+}
+.c_container .c_text{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 5px;
+    position: absolute;
+    bottom: 0.7px;
+    right: 2px;
+    left: 1.5px;
+    color: black;
+}
+.c_Content{
+    font-family: 'Inter';
+    font-weight: 300;
+    font-style: italic;
+    font-size: 12px;
+}
